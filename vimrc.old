@@ -1,0 +1,59 @@
+syntax on
+
+set nocompatible                " don't bother with vi compatibility "
+set autoread                    " reload files when changed on disk, i.e. via `git checkout` "
+set shortmess=atI   
+                    
+set magic                       " For regular expressions turn magic on "
+set title                       " change the terminal's title "
+set nobackup                    " do not keep a backup file "                                                                                           
+set showcmd
+                    
+set noerrorbells                " don't beep "
+set visualbell t_vb=            " turn off error beep/flash "
+set t_vb=           
+set timeoutlen=500
+
+
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set fileformats=unix,dos,mac
+set termencoding=utf-8
+set formatoptions+=m
+set formatoptions+=B
+
+set ruler                       " show the current row and column "
+set number                      " show line numbers "
+set nowrap
+set showcmd                     " display incomplete commands "
+set showmode                    " display current modes "
+set showmatch                   " jump to matches when entering parentheses "
+set matchtime=2                 " tenths of a second to show the matching parenthesis "
+
+set hlsearch                    " highlight searches "
+set incsearch                   " do incremental searching, search as you type "
+set ignorecase                  " ignore case when searching "
+set smartcase                   " no ignorecase if Uppercase char present "
+
+set expandtab                   " expand tabs to spaces "
+set smarttab
+set shiftround
+
+set autoindent shiftround "smartindent 
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4                " insert mode tab and backspace use 4 spaces "
+
+
+filetype on
+filetype plugin on
+
+" key remapping
+
+let mapleader = ","
+
+" inoremap <C-c> "+y
+" inoremap <C-v> "+p
+nnoremap <Leader>cc :set colorcolumn=80<cr>
+nnoremap <Leader>ncc :set colorcolumn-=80<cr>
+

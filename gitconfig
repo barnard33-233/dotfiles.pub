@@ -1,0 +1,8 @@
+[user]
+	name = barnard33-233
+	email = htang0203@gmail.com
+[core]
+	editor = vim
+	excludesFile = ~/.gitignore_global
+[http]
+	proxy = http://127.0.0.1:7890

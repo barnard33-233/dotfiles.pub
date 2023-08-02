@@ -1,0 +1,67 @@
+# 自动刷新
+live_config_reload: true
+# Tab 缩进
+tabspaces: 4
+# 背景透明度
+window.opacity: 1
+
+shell:
+  program: /bin/zellij
+
+colors:
+  primary:
+    background: '0xf8f8f8'
+    foreground: '0x2a2b33'
+
+  normal:
+    black:   '0x000000'
+    red:     '0xde3d35'
+    green:   '0x3e953a'
+    yellow:  '0xd2b67b'
+    blue:    '0x2f5af3'
+    magenta: '0xa00095'
+    cyan:    '0x3e953a'
+    white:   '0xbbbbbb'
+
+  bright:
+    black:   '0x000000'
+    red:     '0xde3d35'
+    green:   '0x3e953a'
+    yellow:  '0xd2b67b'
+    blue:    '0x2f5af3'
+    magenta: '0xa00095'
+    cyan:    '0x3e953a'
+    white:   '0xffffff'
+
+window:
+  # 窗口大小
+  dimensions:
+    columns: 80
+    lines: 80
+
+  # 边缘空白
+  padding:
+    x: 10
+    y: 15
+  dynamic_padding: false
+  startup_mode: Maximized
+  # 窗口修饰
+  # - full: 有边界 + 标题栏
+  # - none: 无边界 + 标题栏
+  decorations: none
+
+font:
+  size: 16
+
+scrolling:
+  # 历史保留行数
+  history: 2000
+
+  # 每次滚动行数
+  multiplier: 10
+
+  # 每次滚动行数（分屏时）
+  faux_multiplier: 100
+
+  # 自动滚动至最新行
+  auto_scroll: true

@@ -52,3 +52,5 @@ alias ssh "env TERM=xterm-256color ssh"
 # plugins:
 # z.lua
 source (lua /usr/share/z.lua/z.lua --init fish enhanced once echo | psub)
+
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1

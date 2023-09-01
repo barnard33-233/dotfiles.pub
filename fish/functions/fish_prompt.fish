@@ -54,10 +54,11 @@ function fish_prompt
         set git_info $brgreen(_git_branch_name)
         set git_info "$parenthesis_start$git_info"
 
-        if [ (_is_git_dirty) ]
-            set -l dirty $bryellow"*"
-            set git_info "$git_info$dirty"
-        end
+        # slow in big repo
+        # if [ (_is_git_dirty) ]
+        #     set -l dirty $bryellow"*"
+        #     set git_info "$git_info$dirty"
+        # end
 
         set git_info "$git_info$parenthesis_end"
     end

@@ -55,9 +55,10 @@ set shell=/usr/bin/fish
 
 " key remapping
 
-let mapleader = ","
+let mapleader = " "
 
 nnoremap <Leader>w :set wrap<cr>
+nnoremap <Leader>nw :set nowrap<cr>
 
 nnoremap <Leader>cc :set colorcolumn=80<cr>
 nnoremap <Leader>ncc :set colorcolumn-=80<cr>
@@ -74,6 +75,14 @@ vnoremap <Down> gj
 vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
+
+" window navigation
+nnoremap <Leader>h <c-w>h
+nnoremap <Leader>j <c-w>j
+nnoremap <Leader>k <c-w>k
+nnoremap <Leader>l <c-w>l
+nnoremap <Leader>sh <c-w>s
+nnoremap <Leader>sv <c-w>v
 
 """"""
 "may not working in every env.

@@ -13,6 +13,7 @@ local lsp_bindings = {
 
 local keymapping = require('keymapping')
 
+-- setup of language servers
 local lspconfig = {
     "neovim/nvim-lspconfig",
     lazy = false,
@@ -22,10 +23,12 @@ local lspconfig = {
         lspconfig.lua_ls.setup({})
         lspconfig.pyright.setup({})
         lspconfig.rust_analyzer.setup({})
+        lspconfig.tsserver.setup({})
         keymapping.bindkeys(lsp_bindings)
     end
 }
 
+-- completion
 local cmp = {
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
@@ -69,4 +72,21 @@ local cmp = {
     end
 }
 
-return {lspconfig, cmp}
+---- symbol outline tool
+--local aerial = {
+--  'stevearc/aerial.nvim',
+--  -- Optional dependencies
+--  lazy = true,
+--  keys = {
+--      {'<leader>a', ':AerialToggle!<cr>', desc = 'aerial-toggle'},
+--  },
+--  dependencies = {
+--     "nvim-tree/nvim-web-devicons"
+--  },
+--  config = function ()
+--      require('aerial').setup({})
+--  end
+--}
+
+
+return {lspconfig, cmp, aerial}

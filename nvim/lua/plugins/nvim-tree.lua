@@ -6,8 +6,8 @@ local config =  {
     keys = {
         {'<leader>t', ':NvimTreeToggle<cr>', desc = 'nvim-tree-toggle'},
     },
-    config = function()
-        require('nvim-tree').setup()
+    config = function ()
+        require('nvim-tree').setup({})
     end
 }
 

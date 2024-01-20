@@ -2,7 +2,6 @@
 
 ## plugins
 specific plugins
-+ langmapper
 + telescope
 
 required functions
@@ -14,8 +13,6 @@ required functions
 
 + lsp
   + treesitter
-+ langs:
-  + typst
 
 filetype sup
 + Markdown linter (no preview)

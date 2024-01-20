@@ -17,6 +17,7 @@ function fish_greeting
     echo $(date)
 end
 
+# >>> clash >>>
 function setproxy
     set -xg all_proxy http://127.0.0.1:7890
     set -xg http_proxy http://127.0.0.1:7890
@@ -33,8 +34,10 @@ end
 
 setproxy
 
-export PATH="/home/tang_/Application:$PATH"
-export PATH="$(go env GOBIN):$PATH"
+# <<< clash <<<
+
+set -x PATH "/home/tang_/Application:$PATH"
+set -x PATH "$(go env GOBIN):$PATH"
 
 # alias
 alias l "ls -al"
@@ -53,4 +56,5 @@ alias ssh "env TERM=xterm-256color ssh"
 # z.lua
 source (lua /usr/share/z.lua/z.lua --init fish enhanced once echo | psub)
 
-export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
+set -x CRYPTOGRAPHY_OPENSSL_NO_LEGACY 1
+set -x LANG en_US.UTF-8

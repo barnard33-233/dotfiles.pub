@@ -24,6 +24,7 @@ set termencoding=utf-8
 set formatoptions+=m
 set formatoptions+=B
 
+set background=light
 set ruler                       " show the current row and column "
 set number                      " show line numbers "
 set relativenumber
